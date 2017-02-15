@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-dnode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "license": "MIT",
   "homepage": "http://github.com/dnode/eslint-config-dnode",
@@ -15,7 +15,6 @@
   },
   "readmeFilename": "README.md",
   "devDependencies": {
-    "eslint": "^3.15.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
