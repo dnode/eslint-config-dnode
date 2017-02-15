@@ -1,3 +1,10 @@
 {
-  "extends": "airbnb"
+  "extends": "airbnb",
+  "rules": {
+    "consistent-return": "off",
+    "global-require": "off",
+    "no-param-reassign": "off",
+    "no-restricted-syntax": "off",
+    "no-underscore-dangle": "off"
+  }
 }
