@@ -33,7 +33,7 @@ function example(example) {
 
 I don't like to force the use of `require` in a global way. Sometimes 
 its just shorter to use it inside a structure. Like inside an object for 
-the `lib.js`:
+the `lib.js`.
  
 ## bad
 
@@ -54,6 +54,12 @@ module.exports = {
   Example: require('./Example'),
 };
 ```
+
+
+# no-await-in-loop
+
+Sometimes the async operations depending on each other in a loop. So its
+a legal use of await in a loop.
 
 
 # no-param-reassign
