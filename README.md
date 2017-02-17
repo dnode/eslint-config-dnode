@@ -115,9 +115,3 @@ for (const example of examples) {
   
 }
 ```
-
-
-# no-underscore-dangle
-
-I don't like to use `_` for private/protected, but sometimes its just 
-good to avoid name collisions without think about stupid other names. 
