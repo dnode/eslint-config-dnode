@@ -4,6 +4,7 @@
     "consistent-return": "off",
     "global-require": "off",
     "import/newline-after-import": "off",
+    "import/no-dynamic-require": "off",
     "no-await-in-loop": "off",
     "no-param-reassign": "off",
     "no-restricted-syntax": "off"

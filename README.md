@@ -7,7 +7,7 @@ write a `return;` or `return undefined;`.
 ## bad
 
 Use `return;` or `return undefined;` if nothing should be returned:
-```
+```javascript
 function example(example) {
   if (example === 'example') {
     return example;
@@ -20,7 +20,7 @@ function example(example) {
 
 Just skip the unneeded returns and rely on the implicit return 
 `undefined`:
-```
+```javascript
 function example(example) {
   if (example === 'example') {
     return example;
@@ -38,7 +38,7 @@ the `lib.js`.
 ## bad
 
 Define first `const` variables for all `require`:
-```
+```javascript
 const Example = require('./Example');
 
 module.exports = {
@@ -49,7 +49,7 @@ module.exports = {
 ## good
 
 Just use `require` inside the object:
-```
+```javascript
 module.exports = {
   Example: require('./Example'),
 };
@@ -64,7 +64,7 @@ with other sequences.
 ## bad
 
 Using always new lines to separate require and another sequences:
-```
+```javascript
 const app = require('express')();
 
 app.listen(process.env.PORT);
@@ -73,9 +73,36 @@ app.listen(process.env.PORT);
 ## good
 
 Group the lines by logically:
-```
+```javascript
 const app = require('express')();
 app.listen(process.env.PORT);
+```
+
+
+#  import/no-dynamic-require
+
+Dynamic require can not be analysed by static code analyser. But they
+allow a lot of convenient structures.
+
+## bad
+
+Manually require all files statically into an object:
+```javascript
+const examples = {
+  a: require('./a'),
+  b: require('./b'),
+  c: require('./c'),
+};
+const example = 'a';
+examples[example]();
+```
+
+## good
+
+Use dynamic require for a convenient structure:
+```javascript
+const example = 'a';
+require(`./${example}`)();
 ```
 
 
@@ -94,7 +121,7 @@ is a short and effective way to handle this.
 ## bad
 
 Define new variables:
-```
+```javascript
 function example(examples) {
   let checkedExamples = examples;
   if (!Array.isArray(checkedExamples)) {
@@ -106,7 +133,7 @@ function example(examples) {
 ## good
 
 Just reassign the parameters:
-```
+```javascript
 function example(examples) {
   if (!Array.isArray(examples)) {
     examples = [examples];
@@ -124,7 +151,7 @@ JavaScript allow to iterate over arrays/objects with `for ... in` and
 ## bad
 
 `.forEach` with arrow function:
-```
+```javascript
 examples.forEach(example => {
 
 });
@@ -133,7 +160,7 @@ examples.forEach(example => {
 ## good
 
 Use the native keywords of JavaScript:
-```
+```javascript
 for (const example of examples) {
   
 }
