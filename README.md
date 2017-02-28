@@ -56,6 +56,29 @@ module.exports = {
 ```
 
 
+#  import/newline-after-import
+
+If using require it can be smart to chain and group the require together 
+with other sequences.
+
+## bad
+
+Using always new lines to separate require and another sequences:
+```
+const app = require('express')();
+
+app.listen(process.env.PORT);
+```
+
+## good
+
+Group the lines by logically:
+```
+const app = require('express')();
+app.listen(process.env.PORT);
+```
+
+
 # no-await-in-loop
 
 Sometimes the async operations depending on each other in a loop. So its
