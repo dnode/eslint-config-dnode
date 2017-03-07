@@ -165,3 +165,26 @@ for (const example of examples) {
   
 }
 ```
+
+
+# no-shadow
+
+It can make sense to use the same variables in different layers, 
+especially for closures in array functions. But still care about the 
+readability.
+  
+## bad
+
+Numerate or prefix variables:
+```javascript
+const element = elements.map(element2 => element2.valid)[0];
+// or
+const element = elements.map(innerElement => innerElement.valid)[0];
+```
+
+## good
+
+Use the same variable names if the readability is still given:
+```javascript
+const element = elements.map(element => element.valid)[0];
+```
