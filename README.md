@@ -112,6 +112,13 @@ Sometimes the async operations depending on each other in a loop. So its
 a legal use of await in a loop.
 
 
+# no-lonely-if
+
+Sometimes there is an else with a following if which is not depending to
+each other. In this cases its not usefull to transform this into an else
+if.
+
+
 # no-param-reassign
 
 JavaScript doesn't have overloaded functions. So to define functions 
@@ -188,3 +195,10 @@ Use the same variable names if the readability is still given:
 ```javascript
 const element = elements.map(element => element.valid)[0];
 ```
+
+
+# no-underscore-dangle
+
+There is not a problem in using underscores in the beginning of a 
+variable or function, especially if its not used to hint private or
+protected e.g. in translation function '__()'.
