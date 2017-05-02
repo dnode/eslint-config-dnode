@@ -15,6 +15,12 @@ Add a `.eslintrc`:
 
 # Rules
 
+## comma-dangle
+
+Trailing commas always if multiline. Exception for functions because 
+node doesn't allow it.
+
+
 ## consistent-return
 
 A function without a `return` returns implicit `undefined`. So if I have 
