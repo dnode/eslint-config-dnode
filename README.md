@@ -15,6 +15,13 @@ Add a `.eslintrc`:
 
 # Rules
 
+## class-methods-use-this
+
+A method not using this can be static, yes, but I wouldn't force it. 
+There can be reasons a method should be declared used with an instance
+(non static) independently if the method really use this or not.
+
+
 ## comma-dangle
 
 Trailing commas always if multiline. Exception for functions because 

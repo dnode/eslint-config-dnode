@@ -1,6 +1,7 @@
 {
   "extends": "airbnb",
   "rules": {
+    "class-methods-use-this": "off",
     "comma-dangle": ["error", {
       "arrays": "only-multiline",
       "objects": "only-multiline",
