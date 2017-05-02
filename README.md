@@ -129,6 +129,12 @@ Sometimes the async operations depending on each other in a loop. So its
 a legal use of await in a loop.
 
 
+## no-console
+
+There isn't something bad in using `console.log` in node. 12factor say
+explicit logging should be done by `stdout` which is `console.log`.
+
+
 ## no-lonely-if
 
 Sometimes there is an else with a following if which is not depending to
